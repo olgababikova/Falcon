@@ -1,0 +1,342 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+/*общие*/
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #010001;
+    color: #FFFFFF;
+    
+}
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+a {
+    color: #fff;
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+    max-width: 750px;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: 765px;
+    }
+}
+
+/*хедер*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 18px 0;
+    background-color: #010001;
+}
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.line {
+    display: flex;
+    padding-left: 60px 0;
+}
+.header-menu li {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    padding-right: 20px;
+    color: #fff;
+    opacity: 0.8;
+}
+.header-menu li:last-child {
+    padding: 0;
+}
+.header-menu li:hover {
+    opacity: 1;
+}
+@media (max-width: 767px) {
+    .line {
+        display: block;
+        padding: 0;
+    }
+    .header-menu li {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        padding-right: 0;
+        color: #fff;
+        opacity: 0.8;
+    }
+}
+
+/*часть с землей*/
+
+h1 {
+    font-size: 64px;
+    line-height: 75px;
+    padding-top: 190px;
+    text-align: center;
+}
+.top-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: lowercase;
+    width: 268px;
+    margin: 26px auto 32px;
+    text-align: center;
+}
+.earth {
+    text-align: center;
+    width: 100%;
+    
+}
+.top-part {
+    position: relative;
+}
+.text-part {
+    margin-top: 100px;
+    
+}
+hr {
+    height: 50px;
+    width: 1px;
+    background-color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    top: 360px; left: 0; bottom: 0; right: 0;
+    z-index: 2;
+}
+@media (max-width: 767px){
+    
+    h1 {
+        font-size: 32px;
+        padding-top: 80px;
+    }
+    .top-text {
+        font-size: 14px;
+        line-height: 140%;
+        margin: 16px auto 16px;
+    }
+    hr {
+        height: 30px;
+        width: 1px;
+        top: 220px; left: 0; bottom: 0; right: 0;
+        z-index: 2;
+    }
+}
+
+/*часть с ракетой*/
+
+.text-heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    max-width: 177px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.text-part p {
+    max-width: 490px;
+    font-size: 16px;
+    line-height: 29px;
+    align-items: flex-start;
+}
+.param-col {
+    padding-right: 5vw;
+}
+.second {
+    max-width: 220px;
+    padding: 0;
+}
+.param-col li {
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 32px
+}
+.wrap-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.parameters {
+    display: flex;
+    margin-bottom: 100px;
+}
+span {
+    opacity: 0.6;
+}
+.image-part {
+    width: 50%;
+    height: 1450px;
+    background-image: url(/img/image-removebg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    }
+@media (max-width: 992px) {
+    .text-part p {
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 767px) {
+    .text-heading {
+        font-size: 20px;
+        width: 140px;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    .text-part {
+        margin: 0 auto;
+    }
+    .text-part p {
+        font-size: 14px;
+        text-align: center;
+        margin:  0 auto;
+    }
+    .wrap-part {
+        display: block;
+    }
+    .parameters {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .param-col {
+        padding-right: 5vw;
+        width: 50%;
+    }
+    .second {
+        width: 50%;
+    }
+    .image-part {
+        margin: 0 auto;
+        background-position: center top;
+        height: 900px;
+        width: 100%;
+    }
+}
+/*подвал*/
+.footer-logo {
+    margin-top: 150px;
+}
+.footer-social {
+    margin-top: 43px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+.footer-social li {
+    font-size: 18px;
+    line-height: 21px;
+    padding-right: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+.footer-social li:last-child {
+    padding-right: 0;
+}
+.footer-text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #808080;
+}
+.footer {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.footer-btn {
+    display: block;
+    width: 280px;
+    padding: 20px 86px;
+    border: 2px solid #FFFFFF;
+    border-radius: 6px;
+    background-color: #010001;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 30px auto 100px;
+    cursor: pointer;
+}
+.footer-btn:hover {
+    background-color: #fff;
+    opacity: 0.5;
+    color:#010001;
+    font-weight: 700;
+}
+.footer-social li:hover {
+    transform: scale(1.1, 1.1);
+    opacity: 1;
+    cursor: pointer;
+    text-shadow: 1px 1px 10px white;
+}
+@media (max-width: 992px) {
+    .footer-logo {
+    margin-top: 80px;
+    }
+}
+@media (max-width: 767px) {
+    .footer-logo {
+        margin-top: 50px;
+    }
+    .line {
+        display: block;
+    }
+    .footer-social li {
+        padding: 10px 0;
+    }
+    .footer-btn {
+        width: auto;
+    }
+}
